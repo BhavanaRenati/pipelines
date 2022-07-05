@@ -3,7 +3,7 @@ on:
     workflows: [Java CI with Maven]
     types:
       - completed
-name: cd deploy
+name: cd deployment
 jobs:
   deploy:
     name: deploy to cluster
