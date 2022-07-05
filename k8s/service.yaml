@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: demo-microservice-kubernetes
+  name: demo-microservice-kubernetes
+spec:  
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: demo-microservice-kubernetes
+  sessionAffinity: None
+  type: LoadBalancer

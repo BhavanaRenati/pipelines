@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-microservice-kubernetes
+  name: demo-microservice-kubernetes
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-microservice-kubernetes
+  template:
+    metadata:
+       labels:
+        app: demo-microservice-kubernetes
+    spec:
+      containers:
+      - image: renatibhavana/spring-docker:latest
+        imagePullPolicy: Always
+        name: demo-microservice-kubernetes
+        env:
+        - name: SPRING_DATA_MONGODB_HOST
+          value: mongodb.user-bhavana.svc.cluster.local
+        - name: SPRING_DATA_MONGODB_PORT
+          value: "27017"
+        resources:
+          requests:
+            memory: 700Mi
+            cpu: 100m
+          limits:
+            memory: 700Mi
+            cpu: 1           
+        ports:
+        - containerPort: 9000
+          protocol: TCP
