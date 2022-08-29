@@ -1,0 +1,339 @@
+
+
+Inheritance Code------- Single inheritance							
+
+
+
+Class Animal 											
+{
+
+run();
+walk();
+
+System.out.print( " Animal makes good leadership");						
+}												
+											
+
+Class Cat extends Animal
+{
+
+eat();
+
+system.out.print(" Cat is a animal");
+
+
+}
+
+
+Psvm(string[] Arg)
+{
+
+Animal A = new Animal();
+Cat C = new cat();
+
+c.run();
+c.walk();
+c.eat();
+
+}
+
+
+--------------------------------------------------------------------------------------
+
+
+Polymorphism
+
+
+
+Upcasting
+
+
+Class Scooty
+{
+ride();
+
+sos("Scooty is my fav bike to ride");
+
+
+}
+
+Class Scooty extends Yamaha
+{
+
+ride();
+
+sos(" Yamaha is the best bike to ride")
+
+
+}
+
+Pvsm(string[] arg)
+{
+Scooty S = new Yamaha();
+
+s.ride();
+
+}
+
+
+ANS:  Yamaha is the best bike to ride.  bcoz the child/sub class over rides the parent/ super class
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+Multiple inheritance
+
+
+
+We have to use interface keyword  
+
+For interface to interface we use word extend keyword
+interface to Class we use word implements keyword
+Class to class we use word extend keyword
+
+
+
+Example 1------------------
+
+
+interface A
+
+{
+
+void show();
+
+
+
+}
+
+//class B implements A
+
+{
+
+void show();
+sos(" Cats belongs to animal class")
+
+}
+
+void display();
+sos("Hello World")
+
+pvsm(string[] arg)
+{
+
+A AB = new B();
+AB.show();  ----- This one only gives result and valid
+AB.display(); ------ it wont display due to invalid
+
+} //
+
+
+(or)
+
+pvsm(string[] arg)
+{
+
+Animal A = () ->system.out.print(" Hello World");
+
+ A.show();
+
+
+}
+
+
+Example 2---------------
+
+interface FirstInterface {
+  public void myMethod(); // interface method
+}
+
+interface SecondInterface {
+  public void myOtherMethod(); // interface method
+}
+
+// DemoClass "implements" FirstInterface and SecondInterface
+class DemoClass implements FirstInterface, SecondInterface {
+  public void myMethod() {
+    System.out.println("Some text..");
+  }
+  public void myOtherMethod() {
+    System.out.println("Some other text...");
+  }
+}
+
+class MyMainClass {
+  public static void main(String[] args) {
+    DemoClass myObj = new DemoClass();
+    myObj.myMethod();
+    myObj.myOtherMethod();
+  }
+}
+
+---------------------------------------------------------------------------
+
+To display Hello World
+
+Class Bhavana
+{
+
+pvsm(string[] args)
+
+{
+
+system.out.println(" Hello World");
+
+}
+
+}
+
+
+===========================================================================
+
+
+Method:
+
+Example 1----
+
+public class Main {
+  static void myMethod(String fname) {
+    System.out.println(fname + " Refsnes");
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam");
+    myMethod("Jenny");
+    myMethod("Anja");
+  }
+}
+// Liam Refsnes
+// Jenny Refsnes
+// Anja Refsnes
+
+
+
+Example 2-------
+
+public class Main {
+  static void myMethod(String fname, int age) {
+    System.out.println(fname + " is " + age);
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam", 5);
+    myMethod("Jenny", 8);
+    myMethod("Anja", 31);
+  }
+}
+
+// Liam is 5
+// Jenny is 8
+// Anja is 31
+
+
+Example 3-------------
+
+
+public class Main {
+
+static int myMethod( int a, int b)
+{
+ return a+ b;
+}
+
+
+
+public static void main(String[] args)
+{
+
+int x = myMethod(3, 7);
+
+System.out.println(x);
+
+
+}
+}
+
+Ans --- 10
+
+
+==========================================================================
+Overloading-----
+
+Multiple methods can have the same names but with different parameters.
+Instead of defining two methods that should do the same thing, it is better to overload one.
+
+public class Main{
+
+static int myMethod(int a,int b)
+
+{
+return a + b;
+
+}
+
+static float myMethod(float a, float b)
+
+{
+
+return a+ b;
+}
+
+public static void main(String[] args)      -------------- declaring single method for two parameters
+
+{
+int myNumb1 = myMethod(1,1);               ==================== 1 parameter
+float myNumb2 = myMethod(12.23f, 32.567f); =====================2 nd parameter.
+System.out.println("int:" + myNumb1);
+System.out.println("float:" + myNumb2);
+
+}
+
+}
+
+============================================================================================
+
+String can be mutable by using the String Buffer or String Builder.
+String Buffer / Builder
+
+
+
+class Bhavana
+{
+
+public static void main(String[] args)
+
+{
+
+StringBuffer sbf = new StringBuffer ("Bhavana");
+
+sbf.append(" Renati");
+sbf.replace(0, 5, "Naveeen");
+System.out.println(sbf);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
